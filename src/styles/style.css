@@ -1,0 +1,25 @@
+/* Reset CSS */
+body{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar{
+  padding: 20px;
+  background-color: lightpink;
+  display:flex;
+  gap: 20px;
+}
+
+.nav-buttons{
+  padding: 10px 20px;
+  background-color:rgb(0, 136, 255);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.nav-buttons:hover{
+  background-color:rgb(0, 110, 206);
+}
