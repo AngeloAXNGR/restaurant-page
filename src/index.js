@@ -1,6 +1,6 @@
-import { createHome } from './components/home';
-import { contactComponent } from './components/contact';
-import { menuComponent } from './components/menu';
+import { createHomeComponent } from './components/home';
+import { createContactComponent } from './components/contact';
+import { createMenuComponent } from './components/menu';
 import './styles/style.css';
 
 
@@ -30,7 +30,7 @@ function navbarComponent(){
   homeButton.textContent = 'Home';
   homeButton.addEventListener('click', ()=>{
     content.innerHTML = '';
-    content.appendChild(createHome());
+    content.appendChild(createHomeComponent());
   });
 
   const menuButton = document.createElement('button');
@@ -38,7 +38,7 @@ function navbarComponent(){
   menuButton.textContent = 'Menu';
   menuButton.addEventListener('click', ()=>{
     content.innerHTML = '';
-    content.appendChild(menuComponent());
+    content.appendChild(createMenuComponent());
   });
 
 
@@ -47,7 +47,7 @@ function navbarComponent(){
   contactButton.textContent = 'Contact';
   contactButton.addEventListener('click', ()=>{
     content.innerHTML = '';
-    content.appendChild(contactComponent());
+    content.appendChild(createContactComponent());
   });
 
   element.append(homeButton, menuButton, contactButton);
@@ -62,7 +62,7 @@ function mainComponent(){
 
   // display home component on initial load
   buttons[0].classList.add('active');
-  element.appendChild(createHome());
+  element.appendChild(createHomeComponent());
   return element;
 }
 

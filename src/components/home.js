@@ -41,7 +41,7 @@ function createIntroSection(){
   return element;
 }
 
-function createHome(){
+function createHomeComponent(){
   let element = document.createElement('div');
   element.classList.add('home');
 
@@ -51,4 +51,4 @@ function createHome(){
   return element;
 }
 
-export {createHome};
+export {createHomeComponent};
