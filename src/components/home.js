@@ -1,12 +1,12 @@
-import homeBackground from '../img/home-background.jpg';
-import smallLogo from '../img/logo-small.png';
+import mainLogo from '../img/main-logo.png';
 import introImage from '../img/intro-image.jpg';
 
 function createHomeLogo(){
   const element = document.createElement('div');
   element.classList.add('home-logo');
   let homeLogo = new Image();
-  homeLogo.src = smallLogo;
+  homeLogo.src = mainLogo;
+  homeLogo.classList.add('main-logo');
   element.appendChild(homeLogo);
 
   return element;
@@ -44,9 +44,6 @@ function createIntroSection(){
 function createHome(){
   let element = document.createElement('div');
   element.classList.add('home');
-
-  const backgroundImage = new Image();
-  backgroundImage.src = homeBackground;
 
   element.appendChild(createHomeLogo());
 
