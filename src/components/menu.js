@@ -167,6 +167,44 @@ const margaritas = [
   },  
 ]
 
+const gin = [
+  {
+    name:"Beefeater 24",
+    description:"",
+    rating: "10"
+  },
+  {
+    name:"The Botanist",
+    description:"",
+    rating: "12"
+  },
+  {
+    name: "Roku Gin",
+    description:"",
+    rating:"12"
+  },
+  {
+    name:"Monkey 47",
+    description:"",
+    rating: "12"
+  },  
+  {
+    name:"Hendricks",
+    description:"",
+    rating: "12"
+  },  
+  {
+    name:"Hendrick Lunar",
+    description:"",
+    rating: "12"
+  },  
+  {
+    name:"Hendrick Neptunia",
+    description:"",
+    rating: "12"
+  },  
+]
+
 function createMenuItem(name, description, rating){
   let element = document.createElement('div');
   element.classList.add('menu-item');
@@ -266,17 +304,32 @@ function createCards(){
   legend5.textContent = 'Margaritas';
   legend5.classList.add('menu-label');
 
-  let card6 = document.createElement('div');
+  let card6 = document.createElement('fieldset');
   card6.classList.add('menu-card');
-  card6.appendChild(createHomeLogo());
+  let itemList6 = document.createElement('div')
+  itemList6.classList.add('item-list');
+
+  gin.forEach(item =>{
+    itemList6.appendChild(createMenuItem(item.name, item.description, item.rating));
+  });
+
+  let legend6 = document.createElement('legend');
+  legend6.textContent = 'Gin';
+  legend6.classList.add('menu-label');
+
+
+  let card7 = document.createElement('fieldset');
+  card7.classList.add('menu-card');
+  card7.appendChild(createHomeLogo());
 
   card1.append(legend1, itemList1);
   card2.append(legend2, itemList2);
   card3.append(legend3, itemList3);
   card4.append(legend4, itemList4);
   card5.append(legend5, itemList5);
+  card6.append(legend6, itemList6);
   
-  element.append(card1, card2, card3, card4, card5, card6 );
+  element.append(card1, card2, card3, card4, card5, card6, card7);
 
   return element;
 }
