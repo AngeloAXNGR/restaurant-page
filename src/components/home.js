@@ -51,4 +51,4 @@ function createHomeComponent(){
   return element;
 }
 
-export {createHomeComponent};
+export {createHomeComponent, createHomeLogo};
